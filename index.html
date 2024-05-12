@@ -9,18 +9,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
         header {
             background-color: #333;
             color: white;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         nav ul li {
@@ -31,32 +37,112 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
         }
 
         section {
-            padding: 50px;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #333;
+            margin-bottom: 40px;
         }
 
         .project {
-            background-color: #f4f4f4;
+            background-color: #fff;
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
         }
 
         .project h3 {
+            color: #333;
             margin-top: 0;
+        }
+
+        .project p {
+            color: #666;
+            margin-bottom: 20px;
         }
 
         .project a {
             display: inline-block;
             background-color: #333;
             color: white;
-            padding: 5px 10px;
+            padding: 8px 20px;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .project a:hover {
+            background-color: #FFD700;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+          .contact-form {
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
             background-color: #555;
         }
     </style>
@@ -75,7 +161,7 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Welcome to my portfolio! I'm a java dveloper passionate about creating beautiful and functional websites.</p>
+        <p>Welcome to my portfolio! I'm a web developer passionate about creating beautiful and functional websites.</p>
     </section>
     
     <section id="projects">
@@ -93,14 +179,21 @@
         <!-- Add more projects as needed -->
     </section>
     
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me through the following channels:</p>
-        <ul>
-            <li>Email: ry1185449@gmail.com</li>
-            <li>Phone: 8795203701</li>
-            <li>LinkedIn: <a href="#">linkedin.com/yourprofile</a></li>
-        </ul>
+  <section id="contact">
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
     </section>
+
+
+    <footer>
+        &copy; 2024 My Portfolio
+    </footer>
 </body>
 </html>
